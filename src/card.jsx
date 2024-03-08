@@ -45,7 +45,7 @@ function Card({ index }) {
   }
 
   return (
-    <img src={apiData} alt='book cover' />
+    <img src={apiData} alt='book cover' width="180px" height="278px" />
   );
 }
 
