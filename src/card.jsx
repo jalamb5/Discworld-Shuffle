@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import novels from './novels.json';
+import { useState, useEffect } from "react";
+import novels from "./novels.json";
 
 function Card({ index }) {
-  const [apiData, setApiData] = useState(null);
+  const [apiData, setApiData] = useState({ url: "", clicked: false});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -13,12 +13,14 @@ function Card({ index }) {
       try {
         const response = await fetch(url);
         if (!response.ok) {
-          throw new Error(`Failed to fetch image: ${response.status} ${response.statusText}`);
+          throw new Error(
+            `Failed to fetch image: ${response.status} ${response.statusText}`,
+          );
         }
 
         const imageBlob = await response.blob();
         const imageObjectURL = URL.createObjectURL(imageBlob);
-        setApiData(imageObjectURL);
+        setApiData({ ...apiData, url: imageObjectURL });
       } catch (error) {
         setError(error.message);
       } finally {
@@ -30,7 +32,7 @@ function Card({ index }) {
 
     // Cleanup function to revoke the object URL when the component is unmounted
     return () => {
-      if (apiData) {
+      if (apiData.url) {
         URL.revokeObjectURL(apiData);
       }
     };
@@ -44,8 +46,21 @@ function Card({ index }) {
     return <div>Error: {error}</div>;
   }
 
+  const handleCardClick = () => {
+    setApiData( { ...apiData, clicked: true } );
+  }
+
   return (
-    <img src={apiData} alt='book cover' width="180px" height="278px" />
+    <div className="card" onClick={handleCardClick}>
+      <img
+        src={apiData.url}
+        alt="book cover"
+        width="180px"
+        height="278px"
+        id={novels.value[index]}
+      />
+      <p>{apiData.clicked.toString()}</p>
+    </div>
   );
 }
 

@@ -1,8 +1,9 @@
+import { useState, useEffect } from "react";
 import Card from "./card";
 import novels from "./novels.json";
 
 // Fisher-Yates Shuffle
-function Shuffle(arr) {
+function shuffle(arr) {
   let m = arr.length,
     t,
     i;
@@ -17,11 +18,13 @@ function Shuffle(arr) {
 }
 
 function Board() {
+  const [cards, setCards] = useState(shuffle(novels.value.map((novel, index) => ({ id: novel.value, clicked: false}))))
+
   const allCards = novels.value.map((novel, index) => (
-    <Card key={novel.value} index={index} />
+      <Card key={novel.value} index={index} />
   ));
 
-  return <div className="board">{Shuffle(allCards)}</div>;
+  return <div className="board">{shuffle(allCards)}</div>;
 }
 
 export default Board;
