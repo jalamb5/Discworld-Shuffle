@@ -11,6 +11,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --background-color: #0b0e2d;
+  --title-color:  #b78aff;
+  --text-color: #ffffff;
+  --score-color: #00ff00;
 }
 
 a {
@@ -23,6 +28,7 @@ a:hover {
 }
 
 body {
+  background-color: var(--background-color);
   margin: 0;
   display: flex;
   justify-content: center;
@@ -32,13 +38,23 @@ body {
 }
 
 h1 {
+  color: var(--title-color);
   font-size: 3.2em;
   line-height: 1.1;
   text-align: center;
 }
 
-h2, p {
+h2,
+p {
   text-align: center;
+}
+
+h2 {
+  color: var(--score-color);
+}
+
+p {
+  color: var(--text-color);
 }
 
 button {
