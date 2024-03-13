@@ -1,8 +1,8 @@
-# Discworld Memory Game
+# Discworld Shuffle
 
-Don't click the same novel twice and try for a high score.
+A memory game where you try to beat your high score by not clicking the same novel twice. 
 
-![Screenshot of Discworld Memory Game](/src/assets/Discworld%20Memory.jpeg)
+![Screenshot of Discworld Shuffle](/src/assets/Discworld%20Shuffle.jpeg)
 
 Built using React with OpenLibrary.org [cover API](https://openlibrary.org/dev/docs/api/covers)
 

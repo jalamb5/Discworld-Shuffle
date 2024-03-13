@@ -100,6 +100,19 @@ button:focus-visible {
   justify-content: space-between;
 }
 
+.border-line {
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, var(--text-color), transparent); /* Fading effect */
+  margin-top: -1rem;
+}
+
+#sub-title {
+  color: var(--title-color);
+
+}
+
+
 /* Define keyframes for the fade-out animation */
 @keyframes fadeOut {
   0% { opacity: 1; }
