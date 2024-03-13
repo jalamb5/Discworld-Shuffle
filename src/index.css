@@ -28,11 +28,17 @@ body {
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  padding-bottom: 5rem;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
+}
+
+h2, p {
+  text-align: center;
 }
 
 button {
