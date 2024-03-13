@@ -71,7 +71,6 @@ function Board() {
         <h2 className={message === '' ? "no-message" : "message" }>{message}</h2>
         <h2>High Score: {highScore}</h2>
       </div>
-
       <div className="board">{cards}</div>
     </div>
   );
