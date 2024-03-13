@@ -50,13 +50,10 @@ function Card({ key, index, onClick }) {
   const handleClick = () => {
     setClicked(true);
     onClick();
-  }
+  };
 
   return (
-    <div
-      className={'card'}
-
-    >
+    <div className={"card"}>
       <img
         src={apiData.url}
         alt="book cover"
@@ -66,7 +63,6 @@ function Card({ key, index, onClick }) {
         key={key}
         onClick={handleClick}
       />
-      <p>{clicked.toString()}</p>
     </div>
   );
 }
