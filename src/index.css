@@ -94,3 +94,20 @@ button:focus-visible {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
 }
+
+#scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Define keyframes for the fade-out animation */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Apply the animation to the oops message */
+.message {
+  color: red;
+  animation: fadeOut 3s ease-in forwards; /* Adjust the duration as needed */
+}
