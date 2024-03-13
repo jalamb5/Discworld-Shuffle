@@ -17,3 +17,8 @@ Built using React with OpenLibrary.org [cover API](https://openlibrary.org/dev/d
 - Tally score
 - Reset score if cover is clicked more than once
 - Add user notifications for high scores / resets
+
+## Attributions
+Favicon: turtle by Andy Mc from [Noun Project](https://thenounproject.com/browse/icons/term/turtle/ "turtle Icons") (CC BY 3.0)
+Book Covers: [OpenLibrary](https://openlibrary.org)
+Discworld Series: [Terry Pratchett Books](https://www.terrypratchettbooks.com/)
