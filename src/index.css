@@ -66,3 +66,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}

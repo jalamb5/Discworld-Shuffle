@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import novels from "./novels.json";
 
-function Card({ index }) {
-  const [apiData, setApiData] = useState({ url: "", clicked: false});
+function Card({ key, index, onClick }) {
+  const [apiData, setApiData] = useState({ url: "" });
+  const [clicked, setClicked] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -33,10 +34,10 @@ function Card({ index }) {
     // Cleanup function to revoke the object URL when the component is unmounted
     return () => {
       if (apiData.url) {
-        URL.revokeObjectURL(apiData);
+        URL.revokeObjectURL(apiData.url);
       }
     };
-  }, [url]);
+  }, [apiData.url]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -46,20 +47,26 @@ function Card({ index }) {
     return <div>Error: {error}</div>;
   }
 
-  const handleCardClick = () => {
-    setApiData( { ...apiData, clicked: true } );
+  const handleClick = () => {
+    setClicked(true);
+    onClick();
   }
 
   return (
-    <div className="card" onClick={handleCardClick}>
+    <div
+      className={'card'}
+
+    >
       <img
         src={apiData.url}
         alt="book cover"
         width="180px"
         height="278px"
         id={novels.value[index]}
+        key={key}
+        onClick={handleClick}
       />
-      <p>{apiData.clicked.toString()}</p>
+      <p>{clicked.toString()}</p>
     </div>
   );
 }
