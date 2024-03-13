@@ -1,10 +1,12 @@
 # Discworld Shuffle
 
-A memory game where you try to beat your high score by not clicking the same novel twice. 
+A memory game where you try to beat your high score by not clicking the same novel twice.
 
 ![Screenshot of Discworld Shuffle](/src/assets/Discworld%20Shuffle.jpeg)
 
 Built using React with OpenLibrary.org [cover API](https://openlibrary.org/dev/docs/api/covers)
+
+[Live Link](https://discworldshuffle.netlify.app/)
 
 ## Functionality
 
