@@ -1,6 +1,8 @@
 # Discworld Memory Game
 
-Don't click the same novel twice, go for high score.
+Don't click the same novel twice and try for a high score.
+
+![Screenshot of Discworld Memory Game](/src/assets/Discworld%20Memory.jpeg)
 
 Built using React with OpenLibrary.org [cover API](https://openlibrary.org/dev/docs/api/covers)
 
