@@ -7,7 +7,7 @@ function Card({ key, index, onClick }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const url = `http://covers.openlibrary.org/b/${novels.key}/${novels.value[index]}-${novels.size}.jpg`;
+  const url = `https://covers.openlibrary.org/b/${novels.key}/${novels.value[index]}-${novels.size}.jpg`;
 
   useEffect(() => {
     const fetchData = async () => {
