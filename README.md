@@ -10,9 +10,6 @@ Built using React with OpenLibrary.org [cover API](https://openlibrary.org/dev/d
 
 - Pull covers for the first 12 Discworld novels from OpenLibrary
 - Shuffle covers using an implementation of Fisher-Yates Shuffle
-
-### To Do
-
 - Display covers in 4X3 grid
 - Add onClick listeners to each cover card
 - Remember which covers have already been clicked
